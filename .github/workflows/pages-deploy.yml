@@ -24,5 +24,15 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
+      - name: Build Site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll b
+          if [[ -n $SPEC_TEST ]]; then
+            # Bypass the defects of htmlproofer
+            bundle exec jekyll b -b "" -d "$SPEC_TEST"
+          fi
+
       - name: Deploy
         run: bash tools/deploy.sh

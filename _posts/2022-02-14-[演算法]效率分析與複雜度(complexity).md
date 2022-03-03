@@ -62,7 +62,7 @@ pin: false
 當n越大時，不同的複雜度也會有不同的成長情形
 
 ![](https://i.imgur.com/Non82uU.png)
-
+[圖片來源](https://www.google.com/search?q=big+o+complexity&rlz=1C1CHBF_zh-TWTW921TW921&sxsrf=APq-WBtLjXbFCwD2UFKEu4HIn2H9w0_bmQ:1645104671750&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiguM-87Ib2AhUcrlYBHQ8iCasQ_AUoAXoECAEQAw&biw=1920&bih=937&dpr=1#imgrc=eDClsXUtsfsYVM)
 ---
 
 ### EX. 時間複雜度

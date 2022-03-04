@@ -3,7 +3,7 @@ layout: post
 title:  "[演算法]效率分析與複雜度(complexity)"
 date:   2022-02-14 22:00:00 +0800
 categories: 演算法
-tags: 複雜度(complexity)
+tags: 複雜度(complexity) 筆記
 pin: false
 ---
 演算法的目的在於改善一個東西或問題，並在從問題中找出現有最好的辦法
@@ -128,5 +128,5 @@ for(int i=0;i<n;i++){
     newArray[i] = i;
 }
 ```
-
+##### 參考來源為演算法第三版 滄海圖書
 ##### 以上皆為自己整理的筆記，僅供參考與複習使用。

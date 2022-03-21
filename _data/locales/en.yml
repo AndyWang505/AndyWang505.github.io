@@ -42,8 +42,8 @@ copyright:
 meta: Powered by Jekyll with Chirpy theme.
 
 not_found:
-  statment: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
-  hint_template: :HEAD_BAK to try finding it again, or search for it on the :ARCHIVES_PAGE.
+  statment: 找不到您要的網頁，可以選擇
+  hint_template: :HEAD_BAK 或是 :ARCHIVES_PAGE.
   head_back: 返回主頁
   archives_page: 歸檔頁
 

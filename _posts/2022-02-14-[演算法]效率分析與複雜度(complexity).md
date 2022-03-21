@@ -6,6 +6,7 @@ categories: 演算法
 tags: 複雜度(complexity) 筆記
 pin: false
 ---
+## 前言
 演算法的目的在於改善一個東西或問題，並在從問題中找出現有最好的辦法
 
 在程式語言中演算法是攸關時間與空間的重要角色，一個好的演算法可以節省許多時間與記憶體空間，而一個程式在執行時所佔用的記憶體空間也會反映出執行所需要的時間
@@ -64,6 +65,7 @@ pin: false
 ![](https://i.imgur.com/Non82uU.png)
 
 [圖片來源](https://www.google.com/search?q=big+o+complexity&rlz=1C1CHBF_zh-TWTW921TW921&sxsrf=APq-WBtLjXbFCwD2UFKEu4HIn2H9w0_bmQ:1645104671750&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiguM-87Ib2AhUcrlYBHQ8iCasQ_AUoAXoECAEQAw&biw=1920&bih=937&dpr=1#imgrc=eDClsXUtsfsYVM)
+
 ---
 
 ### EX. 時間複雜度

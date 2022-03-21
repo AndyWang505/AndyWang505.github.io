@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 <h2><img class="post-content-img" src="/assets/img/favicons/AboutMeIcon.png" style="width: 32px;"> About Me</h2>
-#### 就讀資訊工程系，喜歡胡搞瞎搞、旅遊、看電影、玩電腦、偶爾畫畫
+#### 就讀資訊工程系，喜歡胡搞瞎搞、旅遊、看電影、享受美食、玩電腦、偶爾畫畫
 
 > *『覺得寫程式就像藝術創作，有時靈感一來可以不計日夜廢寢忘食，一心只想趕快看到成品，創作都來不及了還休息 xD』*
 >

@@ -33,11 +33,17 @@ pin: false
 ## 單向、雙向、迴圈鏈結串列
 
 鏈結串列又分成單向鏈結串列和雙向鏈結串列
+
 * **單向鏈結串列**：節點若無指向上個節點相連，只能做單向遍歷，稱作單向鏈結
-![](https://i.imgur.com/KFyDFzW.png)
+
+![](https://i.imgur.com/AMdtLmc.png)
+
 * **雙向鏈結串列**：節點有指向上個節點並相連，能做雙向遍歷，稱作雙向鏈結
-![](https://i.imgur.com/LXLVZ0D.png)
+
+![](https://i.imgur.com/Wa1vyYQ.png)
+
 * **迴圈鏈結串列**：首節點與末節點相連，稱作迴圈鏈結
+
 ![](https://i.imgur.com/BGxCxfP.png)
 
 ## 指標概念

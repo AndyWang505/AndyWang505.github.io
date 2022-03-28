@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[資料結構]鏈結串列(Linked List)"
-date:   2022-03-21 22:00:00 +0800
+date:   2022-03-20 22:00:00 +0800
 categories: 資料結構
 tags: 鏈結串列(LinkedList) 筆記 指標(pointer)
 pin: false
@@ -28,7 +28,7 @@ pin: false
 
 鏈結串列組成由 **標頭(header)** 和 **節點(node)**，像這個鏈結指向下一個節點，最後一個節點會指向空值
 
-![](https://i.imgur.com/KFyDFzW.png)
+![](https://i.imgur.com/GFSLa7n.png)
 
 ## 單向、雙向、迴圈鏈結串列
 
@@ -36,15 +36,15 @@ pin: false
 
 * **單向鏈結串列**：節點若無指向上個節點相連，只能做單向遍歷，稱作單向鏈結
 
-![](https://i.imgur.com/AMdtLmc.png)
+![](https://i.imgur.com/GFSLa7n.png)
 
 * **雙向鏈結串列**：節點有指向上個節點並相連，能做雙向遍歷，稱作雙向鏈結
 
-![](https://i.imgur.com/Wa1vyYQ.png)
+![](https://i.imgur.com/d9u5GBD.png)
 
 * **迴圈鏈結串列**：首節點與末節點相連，稱作迴圈鏈結
 
-![](https://i.imgur.com/BGxCxfP.png)
+![](https://i.imgur.com/UM9wXCv.png)
 
 ## 指標概念
 

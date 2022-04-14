@@ -3,7 +3,7 @@ layout: post
 title:  "[JS]利用Element.scroll讓訊息置底"
 date:   2022-02-07 22:00:00 +0800
 categories: JavaScript
-tags: 實作
+tags: 實作 JavaScript
 pin: false
 ---
 一般在我們聊天的時候訊息的焦點都會自動固定在最下方追焦最新的訊息  

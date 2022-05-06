@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[JS]利用Element.scroll讓訊息置底"
+title:  "[JS] 利用Element.scroll讓訊息置底"
 date:   2022-02-07 22:00:00 +0800
 categories: JavaScript
 tags: 實作 JavaScript

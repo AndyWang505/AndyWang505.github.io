@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[資料結構]鏈結串列(Linked List)"
+title:  "[資料結構] 鏈結串列(Linked List)"
 date:   2022-03-20 22:00:00 +0800
 categories: 資料結構
-tags: 鏈結串列(LinkedList) 筆記 指標(pointer)
+tags: 鏈結串列(LinkedList) 筆記
 pin: false
 ---
 ## 前言

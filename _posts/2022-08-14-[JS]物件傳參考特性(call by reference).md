@@ -45,7 +45,9 @@ console.log(obj2);
 // obj2 = {name: 'terry'};
 ```
 則 obj 也一起被更改了
+
 為什麼會這樣，原因是他們都是指向同一個記憶體位址，類似C語言中的指標
+
 這邊的賦值也可以說是賦予相同的記憶體位址，這種通常稱做 call by reference，就是傳參考的意思。
 
 ![](https://i.imgur.com/iiXUSCN.png)

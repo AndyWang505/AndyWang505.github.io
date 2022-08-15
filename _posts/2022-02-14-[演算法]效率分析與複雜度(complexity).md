@@ -3,7 +3,7 @@ layout: post
 title:  "[演算法] 效率分析與複雜度(complexity)"
 date:   2022-02-14 22:00:00 +0800
 categories: 演算法
-tags: 複雜度(complexity) 筆記
+tags: complexity 筆記
 pin: false
 ---
 ## 前言

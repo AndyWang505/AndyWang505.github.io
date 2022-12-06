@@ -200,7 +200,7 @@ Step 2. $n^{log_ba}$ 與 f(n) 比較 groth rate，分成 3 個 case：
 - case 2：若f(n) = $Θ(n^{log_ba})$，則 T(n) = $Θ(n^{log_ba}$$·$log_n)$
 - case 3：若f(n) = Ω$(n^{log_ba+ξ})$，ξ 為 > 0 之正常數，且 $a$f(n/$b$) ≤ C·f(n)，C 為 < 1 之正常數，則 T(n) = Θ(f(n))
 
-> 通常大多問題帶這個 Mater Theorem 公式就可以直接求解，神一般好用，但切記別用得太爽www，有些情況下會誤用，如下
+> 通常大多問題帶這個 Master Theorem 公式就可以直接求解，神一般好用，但切記別用得太爽www，有些情況下會誤用，如下
 {: .prompt-danger }
 
 例：T(n)=2T(n/2)+nlogn

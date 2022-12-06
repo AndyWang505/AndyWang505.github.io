@@ -188,7 +188,7 @@ pin: false
 
 ### Master Theorem
 
-在演算法中稱 **主定理**，若 T(n) = aT(n/b)+f(n)，其中 a ≥ 1，b ≥ 1，f(n) 是正成長函式，則可以使用 Mater Theory 來計算決定 T(n) = Θ(?)
+在演算法中稱 **主定理**，若 T(n) = aT(n/b)+f(n)，其中 a ≥ 1，b ≥ 1，f(n) 是正成長函式，則可以使用 Master Theorem 來計算決定 T(n) = Θ(?)
 
 使用方法：
 
@@ -200,7 +200,7 @@ Step 2. $n^{log_ba}$ 與 f(n) 比較 groth rate，分成 3 個 case：
 - case 2：若f(n) = $Θ(n^{log_ba})$，則 T(n) = $Θ(n^{log_ba}$$·$log_n)$
 - case 3：若f(n) = Ω$(n^{log_ba+ξ})$，ξ 為 > 0 之正常數，且 $a$f(n/$b$) ≤ C·f(n)，C 為 < 1 之正常數，則 T(n) = Θ(f(n))
 
-> 通常大多問題帶這個 Mater Theory 公式就可以直接求解，神一般好用，但切記別用得太爽www，有些情況下會誤用，如下
+> 通常大多問題帶這個 Mater Theorem 公式就可以直接求解，神一般好用，但切記別用得太爽www，有些情況下會誤用，如下
 {: .prompt-danger }
 
 例：T(n)=2T(n/2)+nlogn
@@ -229,11 +229,10 @@ Step 2. $n^{log_ba}$ 與 f(n) 比較 groth rate，分成 3 個 case：
 
 ## Extended Master Theorem
 
-Master Theorem 還有一個強化版本，叫 Extended Master Theorem
+Master Theorem 還有一個強化版本，稱 Extended Master Theorem，使用條件如下：
 
 若 T(n) = $a$T($a$/$b$) + f(n) 且 $f(n)/n^{log_ba}$ = $log^kn$，k ≥ 0 之常數 ( 或 f(n) = $n^{log_ba}$·$log^kn$  )
 
 則 T(n) = Θ( $n^{log_ba}$ · $log^{k+1}n$)
-
 
 ##### 以上皆為自己整理的筆記，僅供參考與複習使用。

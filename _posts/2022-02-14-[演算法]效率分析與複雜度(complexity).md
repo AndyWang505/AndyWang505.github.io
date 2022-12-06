@@ -1,136 +1,211 @@
 ---
 layout: post
-title:  "[演算法] 效率分析與複雜度(complexity)"
+title:  "[資料結構] Performance Analysis & Complexity"
 date:   2022-02-14 22:00:00 +0800
-categories: 演算法
+categories: 資料結構
 tags: complexity 筆記
 pin: false
 ---
 ## 前言
 演算法的目的在於改善一個東西或問題，並在從問題中找出現有最好的辦法
 
-在程式語言中演算法是攸關時間與空間的重要角色，一個好的演算法可以節省許多時間與記憶體空間，而一個程式在執行時所佔用的記憶體空間也會反映出執行所需要的時間
+一個好的演算法可以節省許多時間與記憶體空間，而一個程式在執行時所佔用的記憶體空間也會反映出執行所需要的時間
 
-因此才需要效率分析，但其實也不用要求的非常精準，只需要一個最後結果是好的且大家都能夠接受的就行了
+因此才需要效能分析 ( Performance Analysis ) ，但其實也不用要求的非常精準，只需要一個最後結果可符合需求且大家都能夠接受的就行了
 
-## 一、效率分析
+## 效能分析 ( Performance Analysis )
+
 因為每一隻程式在不同硬體設備上執行所花的時間都不同，但演算法不是只適用於一台特定的硬體設備
 
 因此分析方法必須是不受電腦設備、程式語言、程式設計者，以及實作上的細節影響
 
 但我們可以從這個分析結論得知這個演算法效率如何
 
-比如一個簡單的程式可能包含初始化指令、迴圈
+其中分析方法就是 Complexity theory，也是目前比較普遍的方法
 
-那我們可以從迴圈的循環次數分析，但也可能迴圈內做了其他複雜的處理，又或者只是簡單的處理
+## 複雜度理論 ( Complexity theory ) 
 
-在這種情況下，我們可以針對問題，忽略初始化、迴圈控制，其他例行程序
+在 Complexity theory 中，分成 **時間複雜度(Time Complexity)** 與 **空間複雜度(Space Complexity)**
 
-如下方常見的問題與會執行n次的基本運算方式，這些運算方式通常也是構成演算法執行瓶頸的一種，因此利用它們的執行次數來分析是很合理的選擇
+一般 Complexity 表示使用漸近式符號 ( Asymptotic Notation ) 
 
-| 問題 | 基本運算方式 | 
-| -------- | -------- | 
-| 1. 在一個序列中搜尋ｘ | 將ｘ跟序列裡的元素做比較 | 
-| 2. 兩個實數矩陣相乘 | 實數相乘 | 
-| 3. 做一個序列的排序 | 兩個元素做比較 | 
+目的是為了表現時間或空間函數的成長趨勢，種類有：
 
-當我們想好一個基本運算方式且執行的運算數也大致上跟上表的運算方式的執行數成正比
+* Big-oh：O
+* Omega：Ω
+* Theta：Θ
+* little-oh：o
+* little-omega：ω
 
-那我們就有了一個評估演算法效率的準據
-
-如此分析出來的結果就是 **演算法複雜度(complexity)**
-
-所以演算法複雜度也是指這個演算法所執行的基本運算次數
-
-## 二、複雜度
-
-另外在演算法複雜度領域中，有分成 **時間複雜度(Time Complexity)** 與 **空間複雜度(Space Complexity)**
-
-因時間複雜度遠比空間複雜度受重視，除非特別指明，不然一般提到複雜度都是指時間複雜度
-
-演算法複雜度通常都是以 **big O** 來表示，常見的演算法複雜度有（由小到大排序）：
+以及常見的複雜度 groth rate 等級 ( 由小到大 )：
 
 | 小| 常數 (constant) 時間 | Ｏ(1) | 
 | ↓| 雙重對數 (doubly log) 時間 | Ｏ(log log n) | 
 | ↓| 對數 (log) 時間 | Ｏ(log n) | 
 | ↓| 線性 (linear) 時間 | Ｏ(n) | 
 | ↓| n log n 時間 | Ｏ(n log n) | 
-| ↓| 多項式 (polynomial) 時間 | Ｏ(n^a), a ∈ R^+ | 
-| 大| 指數 (exponential) 時間 | Ｏ(2^n) | 
+| ↓| 多項式 (polynomial) 時間 | Ｏ($n^a$), a ∈ $R^+$ | 
+| ↓| 指數 (exponential) 時間 | Ｏ($2^n$) | 
+| 大| 階層 (Factorial) 時間 | Ｏ(n!) | 
 
-再大就是階層時間 big Ｏ(n!)
-
-當n越大時，不同的複雜度也會有不同的成長情形
-
-![](https://i.imgur.com/Non82uU.png)
+![](https://i.imgur.com/CUpCW1x.png)
 
 [圖片來源](https://www.google.com/search?q=big+o+complexity&rlz=1C1CHBF_zh-TWTW921TW921&sxsrf=APq-WBtLjXbFCwD2UFKEu4HIn2H9w0_bmQ:1645104671750&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiguM-87Ib2AhUcrlYBHQ8iCasQ_AUoAXoECAEQAw&biw=1920&bih=937&dpr=1#imgrc=eDClsXUtsfsYVM)
 
 ---
 
-### EX. 時間複雜度
-#### Ｏ(1)
-不管執行幾次都不會影像程式的執行時間
-```c++
-int x = 0;
-int y = 1;
-int temp = x;
-x = y;
-y = temp;
-```
+## 漸近式符號定義 ( Asymptotic Notation Definition)
 
-#### Ｏ(n)
-會因為for迴圈執行n次，影響迴圈內的程式執行幾次
-```c++
-for(int i=0;i<n;i++){
-    x++;
-}
-```
+### ☆ Big-oh：O
 
-#### Ｏ(log n)
-```c++
-int i = 1;
-while(i<n){
-    i = i * 2;
-}
-```
+Def：f(n) = O(g(n)) 存在兩個正整數 C，$n_0$，滿足 f(n) ≤ C．g(n)，Ɐ n ≥ $n_0$
 
-#### Ｏ(n log n)
-```c++
-for(int i=0;i<n;i++){
-    int x = 1;
-    while(x<n){
-        x = x * 2;
-    }
-}
-```
+> Big-oh 描述函式的上界 ( upper-bound )
+{: .prompt-tip }
 
-#### Ｏ(n^2)
-```c++
-for(int i=0;i<n;i++){
-    for(int j=1;j<n;j++){
-        x++;
-    }
-}
-```
+> 例：f(n) = 5$n^2$+8n-9，則f(n) = O($n^2$)
+>
+>   因為可以找到兩個正常數，C = 6，$n_0$ = 7
+>
+>   使5$n^2$+8n-9 ≤ C．$n^2$，Ɐ n ≥ $n_0$
+>
+>   f(n) = O($n^2$)，取 C = 6
+>
+>   5$n^2$+8n-9 ≤ 6$n^2$
+>
+>   n^2-8n+9 ≥ 0
+>   n ≥ 7，所以$n_0$ = 7
 
----
+### Omega：Ω
 
-### EX. 空間複雜度
-#### Ｏ(1)
-```c++
-int x = 0;
-int y = 0;
-x++;
-y++;
-```
+Def：f(n) = Ω(g(n)) 存在兩個正整數 C，$n_0$，滿足 f(n) ≥ C．g(n)，Ɐ n ≥ $n_0$
 
-#### Ｏ(n)
-```c++
-int[] newArray = new int[n];
-for(int i=0;i<n;i++){
-    newArray[i] = i;
-}
-```
-##### 參考來源為演算法第三版 滄海圖書
+> Omega 描述函式的下界 ( lower-bound )
+{: .prompt-tip }
+
+> 例：f(n) = 4$n^2$-8n-9，則f(n) = Ω($n^2$)
+>
+>   因為可以找到兩個正常數，C = 4，$n_0$ = 9/8
+>
+>   使4$n^2$-8n-9 ≥ 4$n^2$
+>
+>   8n ≥ 9，所以$n_0$ = 9/8
+
+### Theta：Θ
+
+Def：f(n) = Θ(g(n)) 存在兩個正整數 $C_1$，$C_2$，滿足 $C_1$．g(n) ≤ f(n) ≤ $C_2$．g(n)，Ɐ n ≥ $n_0$
+
+> Theta 描述函式的邊界 ( bound )
+{: .prompt-tip }
+
+> 例：f(n) = 4$n^2$+8n-9，f(n) = Θ($n^2$)
+>
+>   因為可以找到3個正常數，$C_1$ = 4，$C_2$ = 5，$n_0$ = 9
+>
+>   使$C_1$．$n^2$ ≤ f(n) ≤ $C_2$．$n^2$，Ɐ n ≥ $n_0$
+>
+>   取$C_1$=4，4$n^2$+8n-9 ≤ 4$n^2$，n ≥ 9/8
+>
+>   取$C_2$=5，4$n^2$+8n-9 ≤ 5$n^2$，$n^2$-8n+9 ≤ 0，(n-9)(n+1) ≥ 0，n ≥ 9
+
+### little-oh：o
+
+Def：f(n) = o(g(n)) 對於所有正整數 C 存在一個 $n_0$，使得 f(n) < C．g(n)，Ɐ n ≥ $n_0$
+
+### little-omega：ω
+
+Def：f(n) = ω(g(n)) 對於所有正整數 C 存在一個 $n_0$，使得 f(n) > C．g(n)，Ɐ n ≥ $n_0$
+
+## 遞迴時間函式 (Recursion Time Function)
+
+一般求解 Recursion Time Function 常見做法有幾種：
+
+(1) 迭代法
+
+(2) Master Theory
+
+> Master Theory 另外還有 Extended Master Theory 強化版本，求解 Recursion Time Function 還有一個 Recursion Tree 的作法來猜測近似解
+{: .prompt-tip }
+
+### 迭代法
+
+例1：T(n) = 2T(n-1)+1，T(1)=1，求T(n)=？ O(?)
+
+> T(n) = 2T(n-1)+1
+>
+>   = 2T(n-1)+1
+>
+>   = 4T(n-1)+1+2
+>
+>   = 4[2T(n-3)+1]+1+2
+>
+>   = 8T(n-3)+1+2+4
+>
+>   = ...
+>
+>   = $2^n-1$T(n-(n-1))+$2^n-1$-1
+>
+>   = $2^n-1$
+>
+>   T(n) = $2^n$-1，O($2^n$)
+
+例2：T(n) = T(n-1)+n，T(0)=0，求T(n)=？ O(?)
+
+> T(n) = T(n-1)+n
+>
+>   = T(n-2)+(n-1)+n
+>
+>   = T(n-3)+(n-2)+(n-1)+n
+>
+>   = ...
+>   = T(n-n)+n+n-1+...+1
+>
+>   = T(0)+(n+1)n/2
+>
+>   = $n^2$+n/2
+>
+>   T(n)=$n^2$+n/2，O($n^2$)
+
+### Mater Theory
+
+在演算法中稱 **主定理**，若 T(n) = aT(n/b)+f(n)，其中 a ≥ 1，b ≥ 1，f(n) 是正成長函式，則可以使用 Mater Theory 來計算決定 T(n) = Θ(?)
+
+使用方法：
+
+Step 1. 先求出 $n^{log_ba}$
+
+Step 2. $n^{log_ba}$ 與 f(n) 比較 groth rate，分成：
+
+- case 1：若f(n) = $O(n^{log_ba-ξ})$，ξ 為>0之正常數，則T(n) = $Θ(n^{log_ba})$
+- case 2：若f(n) = $Θ(n^{log_ba})$，則T(n) = $Θ(n^{log_ba}$$．$log_n)$
+- case 3：若f(n) = Ω$(n^{log_ba+ξ})$，ξ 為>0之正常數，且$a$f(n/$b$) ≤ C．f(n)，C 為<1之正常數，則T(n) = Θ(f(n))
+
+> 通常大多問題帶這個 Mater Theory 公式就可以直接求解，神一般好用，但切記別用得太爽www，有些情況下會誤用，如下
+{: .prompt-danger }
+
+例：T(n)=2T(n/2)+nlogn
+
+> 【誤用示範】
+>
+> a=2，b=2，f(n)=nlogn
+>
+> 而 $n^{log_ba}$ = $n^1$ = n
+>
+> Case 3 => T(n) = Θ(f(n)) = Θ(nlogn) = O(nlogn)
+
+原因：
+
+> f(n) = $Ω(n^{log_ba+ξ})$，ξ 為正常數
+>
+> => f(n) = nlogn = $Ω(n^{1+ξ})$，ξ 為正常數，但 ξ 找不到
+>
+> nlogn ≥ C．$(n^{1+ξ})$
+>
+> nlogn ≥ C．n．$n^3$，ξ > 0 常數
+>
+> 所以無法使用
+
+**正解：$Θ(n{log^2}n)$ = $Θ(n．{(logn)^2})$**
+
+
 ##### 以上皆為自己整理的筆記，僅供參考與複習使用。

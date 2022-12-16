@@ -13,6 +13,8 @@ pin: false
 
 因此才需要效能分析 ( Performance Analysis ) ，但其實也不用要求的非常精準，只需要一個最後結果可符合需求且大家都能夠接受的就行了
 
+---
+
 ## 效能分析 ( Performance Analysis )
 
 因為每一隻程式在不同硬體設備上執行所花的時間都不同，但演算法不是只適用於一台特定的硬體設備
@@ -22,6 +24,8 @@ pin: false
 但我們可以從這個分析結論得知這個演算法效率如何
 
 其中分析方法就是 Complexity Theory，也是目前比較普遍的方法
+
+---
 
 ## 複雜度理論 ( Complexity Theory ) 
 
@@ -136,6 +140,8 @@ pin: false
 例2：f(n) = 5n = ω(1)
 
 > True
+
+---
 
 ## 遞迴時間函式 (Recursion Time Function)
 
